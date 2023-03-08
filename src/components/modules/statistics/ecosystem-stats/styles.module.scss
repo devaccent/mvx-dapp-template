@@ -1,0 +1,28 @@
+@import "src/theme/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-normal;
+
+  strong {
+    color: $primary-color;
+  }
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-small;
+  background: get-themed-color(accent-color);
+
+  .item {
+    padding: $spacing-small;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid get-themed-color(border-color);
+    }
+  }
+}
+
+

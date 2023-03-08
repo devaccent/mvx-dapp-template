@@ -1,0 +1,9 @@
+@import "src/theme/variables";
+
+.container {
+  font-weight: bold;
+  text-align: center;
+  color: $secondary-color;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+}

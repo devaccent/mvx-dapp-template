@@ -1,0 +1,41 @@
+@import "src/theme/variables";
+
+.container {
+  padding: $spacing-large $spacing-normal;
+}
+
+.content {
+  @include max-width-container;
+
+  display: flex;
+  gap: $spacing-normal;
+
+  @include media-max($breakpoint-small) {
+    flex-direction: column;
+  }
+}
+
+.card {
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-medium;
+
+  cursor: pointer;
+
+  .cardContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-extra-small;
+  }
+
+  .icon {
+    font-size: 5em;
+  }
+
+  &:hover {
+    color: get-themed-color(title-text-color);
+    background: transparentize($primary-color, 0.7);
+  }
+}

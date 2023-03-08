@@ -1,0 +1,16 @@
+@import "src/theme/variables";
+
+.container {
+  display: flex;
+  overflow: hidden;
+
+  gap: $spacing-small;
+  border-radius: $radius-medium;
+  background: get-themed-color(container-color);
+
+  padding: $spacing-extra-small;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: $font-size-small;
+}

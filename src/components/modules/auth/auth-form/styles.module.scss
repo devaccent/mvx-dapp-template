@@ -1,0 +1,24 @@
+@import "src/theme/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 100%;
+  min-width: 350px;
+  gap: $spacing-medium;
+
+  @include media-max($breakpoint-extra-small) {
+    max-width: initial;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: $spacing-extra-small;
+}

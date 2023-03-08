@@ -1,0 +1,33 @@
+@import "src/theme/variables";
+
+.titleAndButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-extra-small;
+
+  color: get-themed-color(title-text-color);
+
+  div {
+    font-weight: bold;
+  }
+}
+
+.backButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: $spacing-extra-small;
+
+  cursor: pointer;
+  color: get-themed-color(title-text-color);
+
+  div {
+    font-weight: bold;
+  }
+}
+
+.closeButton {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}

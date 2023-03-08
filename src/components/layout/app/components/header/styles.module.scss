@@ -1,0 +1,53 @@
+@import "src/theme/variables";
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: $header-size;
+  padding-inline: $spacing-normal;
+
+  background: get-themed-color(body-color);
+  box-shadow: 0 0 2px 1px get-themed-color(shadow-color);
+}
+
+.contentContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-normal;
+
+  color: get-themed-color(title-text-color);
+}
+
+.menuItem {
+  gap: 5px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+
+  .icon {
+    font-size: 1.5em;
+  }
+}
+
+.authenticatedElementsWrapper {
+  display: flex;
+  gap: $spacing-extra-small;
+  padding: $spacing-extra-small;
+  border-radius: $radius-extra-small;
+  background: get-themed-color(container-color);
+}

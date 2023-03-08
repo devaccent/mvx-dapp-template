@@ -1,0 +1,38 @@
+@import "src/theme/variables";
+
+.menuItem {
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: $spacing-extra-small;
+  padding: $spacing-extra-small;
+
+  border-radius: $radius-medium;
+  border: 1px solid transparent;
+
+  &[data-active="true"] {
+    color: $primary-color;
+  }
+
+  &:hover:not([data-active="true"]):not([aria-disabled=true]) {
+    color: get-themed-color(title-text-color);
+  }
+}
+
+.icon {
+  color: inherit;
+  font-size: 1.3em;
+
+  @include media-max($menu-breakpoint) {
+    font-size: 1.5em;
+  }
+}
+
+.itemText {
+  @include media-max($menu-breakpoint) {
+    display: none;
+  }
+}
