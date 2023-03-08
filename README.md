@@ -6,7 +6,7 @@ See [Dapp Template](https://template-dapp.esdt.space) for a live demo.
 
 ## Getting Started
 
-The dapp is a client side only project built using [React](https://reactjs.org) + [Vite](https://vitejs.dev). It uses the [ping-pong](https://github.com/multiversx/mx-ping-pong-sc) smart contract created and maintained by the [MultiversX](https://github.com/multiversx) team.
+The dapp is a client side only project built using [React](https://reactjs.org) + [Vite](https://vitejs.dev) and it uses the [ping-pong](https://github.com/multiversx/mx-ping-pong-sc) smart contract created and maintained by the [MultiversX](https://github.com/multiversx) team.
 
 ## 1. Requirements
 
@@ -17,7 +17,7 @@ _Minimum_
 - An up-to-date version of NodeJS (tested on v18.10.0)
 
 _Optional_
-- A WalletConnect projectId
+- A [WalletConnect](https://cloud.walletconnect.com) projectId
 - The [ping-pong](https://github.com/multiversx/mx-ping-pong-sc) smart contract deployed
 
 ## 2. Setup
@@ -32,14 +32,18 @@ $ yarn
 
 ### 2.2. Configure your environment variables _(optional)_
 
-For a standard development configuration, you can use the default values.
+For quickly testing the app on devnet, you can use the default environment values.
+
+In case you want to test the app on testnet or mainnet, you will have to deploy the ping-pong contract there and update the environment files accordingly.
+
+The environment files are located in the [/src/app/environment/env](/src/app/environment/env) folder.
 
 > You can generate a WalletConnect projectId [here](https://cloud.walletconnect.com) for free, and you can find the code for the ping-pong smart contract [here](https://github.com/multiversx/mx-ping-pong-sc).
 
 ## 3. Run the app
 
 ### 3.1. For development
-From a terminal, navigate to the project folder and run one of the following commands:
+From a terminal, navigate to the project folder and run one of the following commands, depending on which environment you want to use:
 
 ```bash
 #Devnet
@@ -57,8 +61,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### 3.2 Build for testing and production use
 
-A build of the app is necessary to deploy for testing purposes or for production use.\
-From a terminal, navigate to the project folder and run one of the following commands:
+From a terminal, navigate to the project folder and run one of the following commands, depending on which environment you want to build for:
 
 ```bash
 #Devnet
