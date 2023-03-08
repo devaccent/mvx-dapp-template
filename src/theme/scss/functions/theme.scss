@@ -1,0 +1,3 @@
+@function get-themed-color($color) {
+  @return var(--#{$color});
+}

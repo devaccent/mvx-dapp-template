@@ -1,0 +1,22 @@
+@import "src/theme/variables";
+
+.card {
+  display: flex;
+  gap: $spacing-normal;
+  padding: $spacing-normal;
+  flex-direction: column;
+
+  position: relative;
+  background: get-themed-color(container-color);
+
+  border-radius: $radius-small;
+
+}
+
+.card[data-border="true"] {
+  border: 1px solid get-themed-color(border-color);
+}
+
+.card[data-shadow="true"] {
+  @include card-shadow;
+}

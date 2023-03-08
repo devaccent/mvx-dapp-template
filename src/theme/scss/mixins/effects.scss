@@ -1,0 +1,5 @@
+@import "src/theme/scss/functions/theme";
+
+@mixin card-shadow($blur: 3) {
+  box-shadow: 0 0 #{$blur}px 0 get-themed-color(shadow-color);
+}

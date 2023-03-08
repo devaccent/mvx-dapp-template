@@ -1,0 +1,234 @@
+@import "src/theme/variables.scss";
+
+@mixin text-resets() {
+  font-size: initial;
+
+  a {
+    color: $secondary-color;
+    font-size: $font-size-small;
+    margin-top: $spacing-extra-small;
+  }
+
+  p {
+    margin-block: 0;
+  }
+}
+
+.dapp-core-component__main__h1,
+.dapp-core-component__main__h2,
+.dapp-core-component__main__h3,
+.dapp-core-component__main__h4,
+.dapp-core-component__main__h5,
+.dapp-core-component__main__h6 {
+  margin-bottom: 0 !important;
+}
+
+.dapp-core-component__main__card,
+.dapp-core-component__main__m-auto,
+.dapp-core-component__main__card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include text-resets;
+}
+
+/** Auth - Common **/
+.dapp-core-component__scamPhishingStyles__scam-phishing-alert {
+  display: none;
+}
+
+.dapp-core-component__walletConnectLoginContainerStyles__xPortal-content,
+.dapp-core-component__ledgerConnectStyles__login-connect-container-content {
+  @include text-resets;
+}
+
+/** Auth - Wallet Connect **/
+.dapp-core-component__walletConnectLoginContainerStyles__xPortal-content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-normal;
+
+  div:empty,
+  .dapp-core-component__walletConnectLoginContainerStyles__xPortal-container-heading {
+    display: none;
+  }
+
+  .dapp-core-component__walletConnectLoginContainerStyles__xPortal-loader {
+    .dapp-core-component__main__icon-state {
+      width: 4rem !important;
+      height: 4rem !important;
+
+      .svg-inline--fa {
+        font-size: 4em !important;
+      }
+    }
+  }
+
+  .dapp-core-component__walletConnectLoginContainerStyles__xPortal-pairings {
+    margin-top: 0;
+
+    .dapp-core-component__walletConnectLoginContainerStyles__xPortal-pairing-details {
+      font-size: 0.8rem !important;
+    }
+  }
+
+  .dapp-core-component__walletConnectLoginContainerStyles__xPortal-legacy-link {
+    margin-block: 0;
+    font-size: $font-size-small;
+  }
+
+  .dapp-core-component__walletConnectLoginContainerStyles__xPortal-qr-code {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 !important;
+    margin-block: 0 !important;
+
+    svg {
+      display: flex;
+      border-radius: $radius-extra-small;
+
+      path {
+        fill: get-themed-color(accent-color);
+        &:nth-child(2) {
+          stroke: get-themed-color(title-text-color);
+        }
+      }
+    }
+  }
+}
+
+/** Auth - Wallet Connect Old **/
+.dapp-core-component__main__qr-code-svg-container {
+  flex: 1;
+  display: flex;
+  margin: initial;
+  width: initial;
+  height: initial;
+
+  svg {
+    display: flex;
+    border-radius: $radius-extra-small;
+
+    path {
+      fill: get-themed-color(accent-color);
+      &:nth-child(2) {
+        //stroke: $primary-color;
+        stroke: get-themed-color(title-text-color);
+      }
+    }
+  }
+}
+
+/** Auth - Ledger **/
+.dapp-core-component__ledgerConnectStyles__login-connect-container-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 0 !important;
+  margin-block: 0 !important;
+
+  gap: $spacing-normal;
+
+  .dapp-core-component__ledgerConnectStyles__login-connect-container-heading,
+  .dapp-core-component__ledgerConnectStyles__login-connect-container-link {
+    margin-block: 0;
+    font-size: $font-size-small !important;
+  }
+
+  .dapp-core-component__ledgerConnectStyles__login-connect-container-icon {
+    margin: $spacing-small auto !important;
+
+    path {
+      fill: $primary-color;
+    }
+  }
+}
+
+/** Modal **/
+/** Sign Transaction Modal **/
+.dapp-core-component__dappModalStyles__dappModal{
+  &:not(.dapp-core-component__signWithExtensionModalStyles__extension) {
+    #closeButton {
+      display: none !important;
+    }
+  }
+
+  #closeButton {
+    align-self: center;
+  }
+
+  .dapp-modal-dialog-content {
+    color: get-themed-color(title-text-color) !important;
+    background: get-themed-color(container-color) !important;
+    border: 1px solid get-themed-color(border-color) !important;
+
+    padding-block: $spacing-small;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .dapp-core-component__dappModalStyles__dappModalBody {
+      .dapp-core-component__pageStateStyles__state {
+        display: flex;
+        flex-direction: column;
+
+        gap: $spacing-small;
+        padding-top: $spacing-small;
+
+        p ~ * {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+
+/** Toasts **/
+.dapp-core-component__transactionsToastList-styles__toasts.dapp-core-component__transactionsToastList-styles__toastWrapper {
+  padding: $spacing-extra-small !important;
+
+  color: get-themed-color(title-text-color) !important;
+  background: get-themed-color(container-color) !important;
+  border: 1px solid get-themed-color(border-color) !important;
+}
+
+.dapp-core-component__transactionsToastList-styles__toasts.dapp-core-component__transactionsToastList-styles__toastWrapper.dapp-transaction-toast {
+  .dapp-core-component__transactionDetails-styles__status {
+    display: none !important;
+  }
+}
+
+.dapp-core-component__transactionToast-styles__icon,
+.dapp-core-component__transactionStatusToastStyles__transactions-status-toast-icon {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+
+  svg {
+    height: 1.2rem !important;
+  }
+}
+
+.dapp-core-component__customToast-styles__close,
+.dapp-core-component__transactionToast-styles__close {
+  color: get-themed-color(title-text-color) !important;
+}
+
+.dapp-core-component__styles__content .dapp-core-component__styles__right .dapp-core-component__styles__heading .dapp-core-component__styles__close {
+  color: get-themed-color(text-color);
+}

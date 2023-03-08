@@ -1,0 +1,53 @@
+@import "src/theme/variables.scss";
+@import "src/theme/scss/mixins/theme-generator";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  font-size: $font-size-base;
+  font-family: $main-font-family;
+
+  color: get-themed-color(text-color);
+  background: get-themed-color(body-color);
+
+  width: 100%;
+  height: 100%;
+
+  overscroll-behavior-y: none;
+  transition: background 0.2s ease-in, color 0.2s ease-in;
+}
+
+html {
+  &:not(.light-theme),
+  &.dark-theme {
+    @include generate-theme-colors("dark-theme");
+  }
+
+  &.light-theme {
+    @include generate-theme-colors("light-theme");
+  }
+}
+
+#root {
+  flex: 1;
+  display: flex;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  color: get-themed-color(title-text-color);
+}
+
+a, a:hover, a:active, a:visited {
+  color: inherit;
+  text-decoration: none;
+}

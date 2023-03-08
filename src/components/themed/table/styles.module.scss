@@ -1,0 +1,38 @@
+@import "src/theme/variables";
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: get-themed-color(text-color);
+
+  font-size: $font-size-small;
+}
+
+thead.tableHead,
+th.tableHeadCell {
+  font-weight: 600;
+  padding: $spacing-small;
+  background: get-themed-color(accent-color);
+
+  text-align: left;
+
+  letter-spacing: 1px;
+  color: get-themed-color(title-text-color);
+  border-bottom: 1px solid get-themed-color(border-color);
+}
+
+tr.tableRow,
+td.tableRowCell {
+  color: inherit;
+  padding: $spacing-small;
+  border-bottom: 1px solid get-themed-color(border-color);
+}
+
+tr.tableRow:hover td {
+  color: get-themed-color(title-text-color);
+  background: get-themed-color(highlight-color);
+}
+
+tr:last-of-type td.tableRowCell {
+  border-bottom-color: transparent;
+}

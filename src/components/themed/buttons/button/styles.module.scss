@@ -1,0 +1,93 @@
+@import "src/theme/variables";
+
+.button {
+  gap: 5px;
+  padding: 10px;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: $input-height;
+
+  background: transparent;
+  border: 1px solid transparent;
+
+  outline: none;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+
+  &[data-size='small'] {
+    height: auto;
+    padding: 8px 10px;
+    font-size: $font-size-small;
+  }
+
+  &[data-size='tiny'] {
+    height: auto;
+    padding: 8px 10px;
+    font-size: $font-size-extra-small;
+  }
+
+  &[data-color='default'] {
+    --button-text-color: #{get-themed-color(body-color)};
+    --button-background-color: #{get-themed-color(title-text-color)};
+  }
+
+  &[data-color='primary'] {
+    --button-background-color: #{$primary-color};
+    --button-text-color: #{$text-color-on-primary};
+  }
+
+  &[data-color='secondary'] {
+    --button-text-color: #{$text-on-secondary};
+    --button-background-color: #{$secondary-color};
+  }
+
+  &[data-color='warning'] {
+    --button-text-color: #{get-themed-color(accent-color)};
+    --button-background-color: #{$warning-color};
+  }
+
+  .icon {
+    font-size: 1.3em;
+  }
+}
+
+@mixin contained-button() {
+  color: var(--button-text-color);
+  background: var(--button-background-color);
+}
+
+@mixin outlined-button() {
+  color: var(--button-background-color);
+  border-color: var(--button-background-color);
+}
+
+.button[data-mode='text'] {
+  padding-inline: 0;
+  color: var(--button-background-color);
+}
+
+.button[data-mode='outlined'] {
+  @include outlined-button;
+
+  &:hover:not([data-disabled=true]) {
+    @include contained-button;
+  }
+}
+
+.button[data-mode='contained'] {
+  @include contained-button;
+}
+
+.button[data-disabled=true] {
+  cursor: no-drop;
+  --button-text-color: #{get-themed-color(text-color)};
+
+  &:not([data-mode='text']) {
+    --button-background-color: #{get-themed-color(disabled-color)};
+  }
+}

@@ -1,0 +1,18 @@
+@import "src/theme/variables.scss";
+
+.container {
+  padding: $spacing-small $spacing-medium;
+  border-radius: $radius-extra-small;
+
+  text-align: center;
+  background: get-themed-color(accent-color);
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: $spacing-extra-small;
+
+  color: $success-color;
+}

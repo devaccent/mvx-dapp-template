@@ -1,0 +1,15 @@
+@import "src/theme/scss/themes/dark-theme";
+
+@mixin generate-theme-colors($mode) {
+  @if $mode == "dark-theme" {
+    @each $prop, $color in $dark-theme {
+      --#{$prop}: #{$color};
+    }
+  }
+
+  @if $mode == "light-theme" {
+    @each $prop, $color in $dark-theme {
+      --#{$prop}: #{$color};
+    }
+  }
+}

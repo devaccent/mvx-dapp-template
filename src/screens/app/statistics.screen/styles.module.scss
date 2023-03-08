@@ -1,0 +1,13 @@
+@import "src/theme/variables";
+
+.container {
+  padding: $spacing-large $spacing-normal;
+}
+
+.content {
+  @include max-width-container;
+
+  display: flex;
+  gap: $spacing-normal;
+  flex-direction: column;
+}

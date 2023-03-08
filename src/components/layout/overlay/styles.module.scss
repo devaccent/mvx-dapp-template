@@ -1,0 +1,14 @@
+@import "src/theme/variables";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+
+  background: get-themed-color(overlay-color);
+}

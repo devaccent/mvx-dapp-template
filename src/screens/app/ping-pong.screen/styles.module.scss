@@ -1,0 +1,28 @@
+@import "src/theme/variables";
+
+.container {
+  padding: $spacing-large $spacing-normal;
+}
+
+.content {
+  @include max-width-container;
+
+  display: flex;
+  gap: $spacing-normal;
+  flex-direction: column;
+
+  h1 {
+    font-weight: 900;
+    margin-bottom: $spacing-extra-small;
+  }
+}
+
+.instructions {
+  padding: $spacing-small;
+  border-radius: $radius-extra-small;
+  background: get-themed-color(accent-color);
+
+  em {
+    display: block;
+  }
+}

@@ -1,0 +1,20 @@
+@import "src/theme/variables.scss";
+
+.button {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: $spacing-small;
+  padding: $spacing-small;
+  border-radius: $radius-extra-small;
+
+  color: $primary-color;
+  background-color: get-themed-color(accent-color);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

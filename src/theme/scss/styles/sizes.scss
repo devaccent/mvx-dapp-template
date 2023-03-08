@@ -1,0 +1,24 @@
+/** Spacing **/
+$spacing-extra-small: 8px;
+$spacing-small: 16px;
+$spacing-normal: 24px;
+$spacing-medium: 32px;
+$spacing-large: 64px;
+$spacing-extra-large: 128px;
+
+/** Radius **/
+$radius-extra-small: 4px;
+$radius-small: 8px;
+$radius-base: 16px;
+$radius-medium: 24px;
+$radius-large: 32px;
+$radius-extra-large: 64px;
+
+/** Breakpoints **/
+$breakpoint-extra-small: 576px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 992px;
+$breakpoint-large: 1200px;
+$breakpoint-extra-large: 1400px;
+
+$menu-breakpoint: $breakpoint-medium;

@@ -1,0 +1,6 @@
+{
+  "type": "testnet",
+  "contracts": {
+    "pingPong": "erd1qqqqqqqqqqqqqpgq72l6vl07fkn3alyfq753mcy4nakm0l72396qkcud5x"
+  }
+}

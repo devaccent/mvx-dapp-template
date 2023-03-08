@@ -1,0 +1,14 @@
+@import "src/theme/variables";
+
+$logo-height: 40px;
+
+.logo {
+  height: $logo-height;
+
+  @include media-max($menu-breakpoint) {
+    width: 100%;
+    height: auto;
+  }
+
+  transition: width .2s ease-in-out;
+}
