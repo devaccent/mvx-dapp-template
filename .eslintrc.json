@@ -26,6 +26,7 @@
   },
   "plugins": ["react", "react-hooks", "prettier", "@typescript-eslint"],
   "rules": {
+    "prefer-spread": "off",
     "no-empty-pattern": "off",
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",

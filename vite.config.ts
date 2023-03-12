@@ -1,7 +1,19 @@
+import path from "path";
 import { defineConfig } from "vite";
 import eslint from "vite-plugin-eslint";
 import react from "@vitejs/plugin-react";
 import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfill";
+
+const resolveFixup = {
+  name: "resolve-fixup",
+  setup(build) {
+    build.onResolve({ filter: /react-virtualized/ }, async (args) => {
+      return {
+        path: path.resolve("./node_modules/react-virtualized/dist/umd/react-virtualized.js"),
+      };
+    });
+  },
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,6 +40,7 @@ export default defineConfig({
       },
       // Enable esbuild polyfill plugins
       plugins: [
+        resolveFixup,
         NodeGlobalsPolyfillPlugin({
           buffer: true,
         }),
