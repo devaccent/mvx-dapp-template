@@ -3,14 +3,16 @@ import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 import { PingPongSlice } from "../../modules/ping-pong";
+import { TokensSlice } from "../../modules/tokens";
 
 const persistConfig = {
   storage,
   key: "root",
-  whitelist: [],
+  whitelist: ["tokensData"],
 };
 
 const rootReducer = combineReducers({
+  tokensData: TokensSlice,
   pingPongData: PingPongSlice,
 });
 
