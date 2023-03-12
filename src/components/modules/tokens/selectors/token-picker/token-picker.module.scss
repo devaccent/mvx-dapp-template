@@ -1,0 +1,48 @@
+@import "src/theme/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-extra-small;
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  cursor: pointer;
+  border-radius: $radius-extra-small;
+  border: 1px solid get-themed-color(border-color);
+  background: get-themed-color(accent-color);
+
+  height: $input-height;
+  padding-inline: $spacing-small;
+
+  &:hover {
+    border-color: get-themed-color(highlight-color);
+  }
+
+  .iconContainer {
+    display: flex;
+    position: absolute;
+    align-self: center;
+    right: $spacing-small;
+    align-items: center;
+
+    .expandIcon {
+      font-size: 1.5em;
+    }
+  }
+
+  .valueContainer {
+    display: flex;
+    align-items: center;
+
+    gap: $spacing-extra-small;
+
+    .valueText {
+      flex-grow: 1;
+    }
+  }
+}
