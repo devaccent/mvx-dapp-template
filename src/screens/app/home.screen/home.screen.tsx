@@ -9,7 +9,7 @@ import { EsdtTokenPicker, TokenDetails } from "../../../components/modules/token
 import { EsdtToken } from "../../../modules/tokens";
 import { RoutesConfig } from "../../../app/navigation";
 
-export default function DashboardScreen() {
+export default function HomeScreen() {
   const navigate = useNavigate();
   const [token, setToken] = useState<EsdtToken>();
 
@@ -18,7 +18,8 @@ export default function DashboardScreen() {
       <div className={styles.content}>
         <Card>
           <div className={styles.cardContent}>
-            <h4>EXPLORE TOKENS</h4>
+            <h4>EXPLORE ECOSYSTEM</h4>
+            <div>Explore the tokens created on MultiversX</div>
           </div>
           <EsdtTokenPicker value={token} placeholder={"Select a token"} onChange={setToken} />
 
@@ -36,7 +37,7 @@ export default function DashboardScreen() {
           <Card className={styles.card} onClick={() => navigate(RoutesConfig.statistics)}>
             <div className={styles.cardContent}>
               <h4>STATISTICS</h4>
-              <div>Play a game of blockchain ping-pong</div>
+              <div>See the ecosystem statistics</div>
             </div>
             <Icon className={styles.icon} name={"insights"} />
           </Card>

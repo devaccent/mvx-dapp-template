@@ -14,7 +14,7 @@ const AppLayout = React.lazy(() => import("../../components/layout/app"));
 const AuthScreen = React.lazy(() => import("../../screens/auth/auth.screen"));
 
 /** App Screens **/
-const DashboardScreen = React.lazy(() => import("../../screens/app/dashboard.screen"));
+const HomeScreen = React.lazy(() => import("../../screens/app/home.screen/home.screen"));
 const PingPongScreen = React.lazy(() => import("../../screens/app/ping-pong.screen"));
 const StatisticsScreen = React.lazy(() => import("../../screens/app/statistics.screen"));
 
@@ -27,7 +27,7 @@ export function ApplicationRouter() {
     <React.Suspense fallback={<Loader />}>
       <Routes location={state?.backgroundLocation || location}>
         <Route path={""} element={<AppLayout />}>
-          <Route index element={<DashboardScreen />} />
+          <Route index element={<HomeScreen />} />
 
           <Route element={<AuthenticatedRouteOutlet />}>
             <Route path={RoutesConfig.pingPong} element={<PingPongScreen />} />
