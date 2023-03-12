@@ -1,0 +1,1 @@
+export const EGLD_TOKEN_IDENTIFIER = "EGLD";
