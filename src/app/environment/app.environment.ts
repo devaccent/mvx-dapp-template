@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 import * as commonVariables from "./env/common.json";
 import * as devnetVariables from "./env/devnet.json";
 import * as testnetVariables from "./env/testnet.json";
@@ -6,7 +8,7 @@ import * as mainnetVariables from "./env/mainnet.json";
 import { EnvironmentEnum } from "./enums";
 import { EnvironmentType } from "./types";
 
-const environmentName = import.meta.env.VITE_ENV || EnvironmentEnum.Devnet;
+const environmentName = import.meta.env.VITE_APP_ENVIRONMENT || EnvironmentEnum.Devnet;
 
 let environment: EnvironmentType;
 
@@ -18,14 +20,14 @@ const computedVariables: Partial<EnvironmentType> = {
 
 switch (environmentName) {
   case EnvironmentEnum.Testnet:
-    environment = Object.assign(computedVariables, commonVariables, testnetVariables) as EnvironmentType;
+    environment = _.merge(computedVariables, commonVariables, testnetVariables) as EnvironmentType;
     break;
   case EnvironmentEnum.Mainnet:
-    environment = Object.assign(computedVariables, commonVariables, mainnetVariables) as EnvironmentType;
+    environment = _.merge(computedVariables, commonVariables, mainnetVariables) as EnvironmentType;
     break;
   case EnvironmentEnum.Devnet:
   default:
-    environment = Object.assign(computedVariables, commonVariables, devnetVariables) as EnvironmentType;
+    environment = _.merge(computedVariables, commonVariables, devnetVariables) as EnvironmentType;
     break;
 }
 

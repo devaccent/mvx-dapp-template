@@ -2,5 +2,8 @@
   "type": "devnet",
   "contracts": {
     "pingPong": "erd1qqqqqqqqqqqqqpgq72l6vl07fkn3alyfq753mcy4nakm0l72396qkcud5x"
+  },
+  "mvx": {
+    "apiUrl": "https://devnet-api.multiversx.com"
   }
 }

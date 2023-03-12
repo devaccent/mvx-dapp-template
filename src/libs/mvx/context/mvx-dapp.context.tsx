@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import { EnvironmentsEnum } from "@multiversx/sdk-dapp/types";
 import { AxiosInterceptorContext, DappProvider } from "@multiversx/sdk-dapp/wrappers";
 import { NotificationModal, SignTransactionsModals, TransactionsToastList } from "@multiversx/sdk-dapp/UI";
 
@@ -10,7 +9,7 @@ export default function MvxDappContext(props: PropsWithChildren) {
 
   return (
     <DappProvider
-      environment={EnvironmentsEnum.devnet}
+      environment={AppEnvironment.type}
       customNetworkConfig={{
         name: "customConfig",
         apiTimeout: AppEnvironment.mvx.apiTimeout,
