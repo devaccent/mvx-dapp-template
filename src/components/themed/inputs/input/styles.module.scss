@@ -1,0 +1,26 @@
+@import "src/theme/variables";
+
+.input {
+  padding: $spacing-small;
+  border-radius: $radius-extra-small;
+
+  outline: none;
+  height: $input-height;
+
+  font-size: $font-size-base;
+  background: transparent;
+  color: get-themed-color(title-text-color);
+  border: 1px solid get-themed-color(border-color);
+
+  &:hover {
+    border-color: get-themed-color(highlight-color);
+  }
+
+  &:focus {
+    border-color: $primary-color;
+  }
+
+  &[data-error=true] {
+    border-color: $error-color;
+  }
+}

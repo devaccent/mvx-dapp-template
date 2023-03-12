@@ -1,0 +1,7 @@
+@import "src/theme/variables";
+
+.container {
+  padding: $spacing-small;
+  border-radius: $radius-extra-small;
+  background: get-themed-color(accent-color);
+}

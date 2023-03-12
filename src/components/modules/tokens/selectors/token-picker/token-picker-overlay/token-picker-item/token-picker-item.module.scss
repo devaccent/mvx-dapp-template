@@ -1,0 +1,40 @@
+@import "src/theme/variables";
+
+.container {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  gap: $spacing-extra-small;
+  padding-block: $spacing-small;
+  padding-inline: $spacing-normal;
+
+  color: get-themed-color(text-color);
+
+  &:hover {
+    color: $text-color-on-primary;
+    background: get-themed-color(highlight-color);
+  }
+
+  &[data-is-selected=true] {
+    color: $text-color-on-primary;
+    background: transparentize($primary-color, 0.5);
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.nameContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: $spacing-extra-small;
+}
+
+.rightContainer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}

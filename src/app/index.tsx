@@ -9,6 +9,7 @@ import { MvxDappContext, MvxAxiosContext } from "../libs/mvx";
 import { AppInitGate } from "./gates";
 import { ReduxContextProvider } from "./redux";
 import { ApplicationRouter } from "./navigation";
+import AppDataLoader from "./data/app-data.loader";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider>
           <ReduxContextProvider>
+            <AppDataLoader />
             <MvxDappContext>
               <AppInitGate>
                 <ApplicationRouter />

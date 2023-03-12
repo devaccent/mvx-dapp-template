@@ -9,6 +9,12 @@
 
   display: flex;
   gap: $spacing-normal;
+  flex-direction: column;
+}
+
+.sideBySideCards {
+  display: flex;
+  gap: $spacing-normal;
 
   @include media-max($breakpoint-small) {
     flex-direction: column;

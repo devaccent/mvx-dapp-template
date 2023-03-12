@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import MenuItem, { TMenuItem } from "./components/menu-item";
 
 const routes: TMenuItem[] = [
-  { to: "/", text: "Dashboard", icon: "dashboard" },
+  { to: "/", text: "Home", icon: "dashboard" },
   { to: "/ping-pong", text: "Ping Pong", icon: "sports_tennis" },
   { to: "/statistics", text: "Statistics", icon: "insights" },
 ];
