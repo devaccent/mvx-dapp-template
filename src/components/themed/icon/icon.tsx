@@ -1,10 +1,9 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import styles from "./styles.module.scss";
 
-export type IconProps = {
+export type IconProps = HTMLAttributes<HTMLSpanElement> & {
   name: string;
   title?: string;
-
   className?: string;
 };
 
