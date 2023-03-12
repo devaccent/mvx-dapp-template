@@ -15,5 +15,7 @@ export default class Egld extends EsdtToken {
     this.name = getEgldLabel();
     this.hasAssetImage = true;
     this.assetImageUrl = egldTokenLogo;
+    this.description =
+      "The eGold (EGLD) Token is the native token powering the MultiversX Network. Its utility comprises all core network functionalities, such as staking, governance, transactions, smart contracts, and validator rewards.";
   }
 }
