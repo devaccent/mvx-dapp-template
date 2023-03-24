@@ -12,6 +12,7 @@ export default function MvxDappContext(props: PropsWithChildren) {
       environment={AppEnvironment.type}
       customNetworkConfig={{
         name: "customConfig",
+        shouldUseWebViewProvider: true,
         apiTimeout: AppEnvironment.mvx.apiTimeout,
         walletConnectV2ProjectId: AppEnvironment.walletConnect.projectId,
       }}
