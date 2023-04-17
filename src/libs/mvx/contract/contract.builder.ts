@@ -1,4 +1,4 @@
-import { AbiRegistry, Address, SmartContract, SmartContractAbi } from "@multiversx/sdk-core/out";
+import { AbiRegistry, Address, SmartContract } from "@multiversx/sdk-core";
 import { PartialAbiType } from "./types/partial-abi.type";
 
 export function getContractFromAbi(address: string, abi: PartialAbiType) {
@@ -6,6 +6,6 @@ export function getContractFromAbi(address: string, abi: PartialAbiType) {
 
   return new SmartContract({
     address: new Address(address),
-    abi: new SmartContractAbi(abiRegistry),
+    abi: abiRegistry,
   });
 }
