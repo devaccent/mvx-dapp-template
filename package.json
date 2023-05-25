@@ -1,7 +1,7 @@
 {
   "name": "esdt-space-dapp",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "preview": "vite preview",
@@ -41,7 +41,6 @@
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-react-app": "^7.0.1",
-    "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",

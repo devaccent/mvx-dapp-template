@@ -17,14 +17,7 @@ const resolveFixup = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    eslint(),
-    NodeGlobalsPolyfillPlugin({
-      buffer: true,
-      process: false,
-    }),
-  ],
+  plugins: [react(), eslint()],
   define: {
     global: "globalThis",
   },
@@ -50,7 +43,6 @@ export default defineConfig({
         resolveFixup,
         NodeGlobalsPolyfillPlugin({
           buffer: true,
-          process: false,
         }),
       ],
     },
