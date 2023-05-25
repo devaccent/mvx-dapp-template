@@ -19,7 +19,6 @@
     "@multiversx/sdk-dapp": "^2.11.2",
     "@multiversx/sdk-network-providers": "^1.3.0",
     "@reduxjs/toolkit": "^1.9.2",
-    "helia": "^1.1.5",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "react": "^18.2.0",
