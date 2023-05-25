@@ -1,4 +1,4 @@
-import logger from "redux-logger";
+import { logger } from "redux-logger";
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore as persistStoreHandler } from "redux-persist";
 

@@ -40,6 +40,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
+    needsInterop: ["react-virtualized"],
     esbuildOptions: {
       // Node.js global to browser globalThis
       define: {
