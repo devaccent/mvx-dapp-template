@@ -7,9 +7,10 @@
   "extends": [
     "prettier",
     "react-app",
-    "plugin:import/recommended",
-    "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended"
   ],
   "globals": {
@@ -24,13 +25,14 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "prettier", "@typescript-eslint"],
+  "plugins": ["react", "react-hooks", "prettier", "@typescript-eslint", "import"],
   "rules": {
     "prefer-spread": "off",
     "no-empty-pattern": "off",
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-empty-interface": "off"
   },
@@ -39,14 +41,14 @@
       "version": "18.2"
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "paths": ["src", "node_modules"],
+      "@typescript-eslint/parser": [".ts", ".tsx", "d.ts"]
     },
     "import/resolver": {
+      "typescript": {},
       "node": {
         "paths": ["src", "node_modules"],
-        "extensions": [
-          ".js", ".jsx", ".ts", ".tsx"
-        ]
+        "extensions": [".js", ".jsx", "d.ts", ".ts", ".tsx"]
       }
     }
   }

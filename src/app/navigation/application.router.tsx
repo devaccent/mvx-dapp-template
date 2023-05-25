@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Loader } from "../../components/themed";
@@ -8,15 +8,15 @@ import { useScrollToTopHandler } from "./hooks/useScrollToTopHandler";
 import { AuthRoutesOutlet, AuthenticatedRouteOutlet } from "./outlets";
 
 /** Layouts **/
-const AppLayout = React.lazy(() => import("../../components/layout/app"));
+const AppLayout = lazy(() => import("../../components/layout/app"));
 
 /** Auth Screens **/
-const AuthScreen = React.lazy(() => import("../../screens/auth/auth.screen"));
+const AuthScreen = lazy(() => import("../../screens/auth/auth.screen"));
 
 /** App Screens **/
-const HomeScreen = React.lazy(() => import("../../screens/app/home.screen/home.screen"));
-const PingPongScreen = React.lazy(() => import("../../screens/app/ping-pong.screen"));
-const StatisticsScreen = React.lazy(() => import("../../screens/app/statistics.screen"));
+const HomeScreen = lazy(() => import("../../screens/app/home.screen/home.screen"));
+const PingPongScreen = lazy(() => import("../../screens/app/ping-pong.screen"));
+const StatisticsScreen = lazy(() => import("../../screens/app/statistics.screen"));
 
 export function ApplicationRouter() {
   useScrollToTopHandler();
