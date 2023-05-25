@@ -41,7 +41,6 @@
       "version": "18.2"
     },
     "import/parsers": {
-      "paths": ["src", "node_modules"],
       "@typescript-eslint/parser": [".ts", ".tsx", "d.ts"]
     },
     "import/resolver": {
