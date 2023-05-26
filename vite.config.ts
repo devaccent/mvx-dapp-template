@@ -1,5 +1,6 @@
 import path from "path";
 import { defineConfig } from "vite";
+import mkcert from "vite-plugin-mkcert";
 import eslint from "vite-plugin-eslint";
 import react from "@vitejs/plugin-react";
 import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfill";
@@ -17,12 +18,20 @@ const resolveFixup = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), eslint()],
+  plugins: [
+    react(),
+    eslint(),
+    mkcert(),
+    NodeGlobalsPolyfillPlugin({
+      buffer: true,
+      process: false,
+    }),
+  ],
   define: {
     global: "globalThis",
   },
   server: {
-    // https: true,
+    https: true,
     port: 3000,
   },
   resolve: {
@@ -44,6 +53,7 @@ export default defineConfig({
         resolveFixup,
         NodeGlobalsPolyfillPlugin({
           buffer: true,
+          process: false,
         }),
       ],
     },
