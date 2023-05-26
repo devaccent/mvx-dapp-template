@@ -1,5 +1,5 @@
 import React from "react";
-import { Token } from "../../../../modules/tokens";
+import { Token } from "@/modules/tokens";
 
 type Props = {
   token: Token;
@@ -13,5 +13,5 @@ export default function TokenImage(props: Props) {
     return null;
   }
 
-  return <img width={size} height={size} loading={"lazy"} src={token.assetImageUrl} />;
+  return <img alt={`${token.name} Logo`} width={size} height={size} loading={"lazy"} src={token.assetImageUrl} />;
 }

@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import { AutoSizer, List } from "react-virtualized";
 import React, { PropsWithChildren, ReactNode } from "react";
 
@@ -17,7 +15,7 @@ type RowRendererProps = {
   index: number;
   isScrolling: boolean;
   isVisible: boolean;
-  style: any;
+  style: React.CSSProperties;
 };
 
 export default function TokenPickerVirtualizedList(props: Props) {
