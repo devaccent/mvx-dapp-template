@@ -7,11 +7,11 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "start:devnet": "VITE_APP_ENVIRONMENT=devnet vite",
-    "build:devnet": "VITE_APP_ENVIRONMENT=testnet && tsc && vite build",
+    "build:devnet": "export VITE_APP_ENVIRONMENT=testnet && tsc && vite build",
     "start:testnet": "VITE_APP_ENVIRONMENT=testnet vite",
-    "build:testnet": "VITE_APP_ENVIRONMENT=testnet && tsc && vite build",
+    "build:testnet": "export VITE_APP_ENVIRONMENT=testnet && tsc && vite build",
     "start:mainnet": "VITE_APP_ENVIRONMENT=mainnet vite",
-    "build:mainnet": "VITE_APP_ENVIRONMENT=mainnet && tsc && vite build"
+    "build:mainnet": "export VITE_APP_ENVIRONMENT=mainnet && tsc && vite build"
   },
   "dependencies": {
     "@helia/strings": "^1.0.0",
